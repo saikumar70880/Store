@@ -5,6 +5,16 @@ const productsSchema = new mongoose.Schema({
   price: { type: Number, required: [true, `Product price must be provided`] },
   featured: { type: Boolean, default: false },
   rating: { type: Number, default: 4.5 },
+const ProductSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: [true, "Products name is a required field!"],
+  },
+  price: {
+    type: Number,
+    required: [true, "Product price is a required field!"],
+  },
+  featured: { type: Boolean, default: false },
   createdAt: { type: Date, default: Date.now() },
   company: {
     type: String,
